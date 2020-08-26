@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <style>
+        .div1 {
+            width: 500px;
+            height: 700px;
+            margin: 250px 155px;
+            
+            box-shadow: 0px 0px 20px 9px #97979c;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .div2 {
+
+            top: 75px;
+            left: 0px;
+            position: absolute;
+            width: 139px;
+            height: 9%;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border-radius: 30px;
+            transition: .5s;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        .but1 {
+
+            padding: 12px 42px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        #head {
+            padding: 10px 50px;
+            margin: 24px 31px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 0.7em;
+        }
+
+        .div3 {
+            margin: 80px 42px;
+            width: 10px 10px;
+            height: 10px 10px;
+        }
+
+        .in1 {
+            padding: 4px 14px;
+            margin: 17px 2px;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+
+        .in2 {
+            padding: 4px 14px;
+            margin: 17px 120px;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+
+        }
+
+        
+
+        .sub1 {
+            width: 70%;
+            padding: 11px 34px;
+            cursor: pointer;
+            display: block;
+            margin: 47px auto;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        .form21 {
+            top: 230px;
+            position: absolute;
+            width: 80%;
+            transition: .9s;
+        }
+        #booking1{
+            left:40px;
+        }
+        #booking2{
+            left:600px;
+        }
+        #booking3{
+            left:900px;
+        }
+        p{
+            font-size: 0.6em;
+            padding: 0px 1px;
+            margin: 12px 16px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        span{
+            font-size: 0.6em;
+            padding: 0px 1px;
+            margin: 12px 21px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div id="head">Book Flights, Hotels and Holiday Packages</div>
+        <div class="div2" id="tab"> </div>
+        <button type="button" class="but1" onclick="but1()">One way</button>
+        <button type="button" class="but1" onclick="but2()">Round Trip</button>
+        <button type="button" class="but1" onclick="but3()">Multi-City</button>
+        <div class="div3">
+            <form action="#" class="form21" id="booking1">
+                <input type="text" placeholder="Departure From" class="in1">
+                <input type="text" placeholder="Going To" class="in1">
+                <p>Departure Date</p>
+                <input type="date" class="in1" min="2019-01-01" max="2020-12-31">
+                
+
+                <input type="submit" value="Submit" class="sub1">
+
+
+            </form>
+            <form action="#" class="form21" id="booking2">
+                <input type="text" placeholder="Departure From" class="in1">
+                <input type="text" placeholder="Going To" class="in1">
+                <span>Departure Date</span>
+                <span>Return Date</span>
+                <input type="date" class="in1" min="2019-01-01" max="2020-12-31">
+                <input type="date" class="in1" min="2019-01-01" max="2020-12-31">
+                <input type="submit" value="Submit" class="sub1">
+
+            </form>
+            <form action="#" class="form21" id="booking3">
+                <input type="text" placeholder="Departure From city1" class="in1">
+                <input type="text" placeholder="Going To city2" class="in1">
+                <span>Departure Date</span>
+               
+                <input type="date" class="in1" min="2019-01-01" max="2020-12-31">
+               
+                <input type="text" placeholder="Departure From city2" class="in1">
+                <input type="text" placeholder="Going To city3" class="in1">
+                <span>Departure Date</span>
+                <span>Return Date</span>
+                <input type="date" class="in1" min="2019-01-01" max="2020-12-31">
+                <input type="date" class="in1" min="2019-01-01" max="2020-12-31">
+                <input type="submit" value="Submit" class="sub1">
+
+                
+
+            </form>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+    <script>
+        var x = document.getElementById("booking1");
+       var y = document.getElementById("booking2");
+        var z = document.getElementById("tab");
+        var a = document.getElementById("booking3");
+        function but2() {
+
+            z.style.left = "155px";
+           x.style.left = "-400px";
+            y.style.left = "40px";
+            a.style.left="600px";
+            
+
+        }
+        function but1() {
+
+            z.style.left = "0px";
+            x.style.left = "40px";
+            y.style.left = "600px";
+            a.style.left="900px";
+
+        }
+        function but3() {
+
+            z.style.left = "308px";
+            x.style.left="-600px";
+            y.style.left="-400px";
+            a.style.left="40px";
+           
+        }
+    </script>
+</body>
+
+</html>
